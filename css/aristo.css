@@ -1,0 +1,39 @@
+/*
+CSS 3 Docs
+http://qooxdoo.org/documentation/general/webkit_css_styles
+http://trac.webkit.org/browser/trunk/LayoutTests//fast/css
+*/
+
+input[type="checkbox"] {
+  -khtml-appearance: none;
+  background: url(../images/check-box-bezel.png) no-repeat;
+  width: 15px;
+  height: 16px;
+}
+
+input[type="checkbox"]:checked {
+  background: url(../images/check-box-bezel-selected.png) no-repeat;
+}
+
+button {
+  -khtml-appearance: none;
+  background: none;
+  line-height: 12px;
+  -webkit-border-image: url(../images/button-bezel.png) 0 0 0 0 stretch stretch;
+  padding: 4px 6px;
+  font-family: 'Arial';
+  font-size: 12px;
+  font-weight: bold;
+  color: #4F4F4F;
+}
+
+button:hover {
+  -webkit-border-image: url(../images/button-bezel-selected.png) 0 0 0 0 stretch stretch;
+}
+
+button:active {
+}
+
+button:disabled {
+  
+}
