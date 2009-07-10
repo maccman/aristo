@@ -4,6 +4,12 @@ http://qooxdoo.org/documentation/general/webkit_css_styles
 http://trac.webkit.org/browser/trunk/LayoutTests//fast/css
 */
 
+* {
+  font-family: 'Arial';
+  font-size: 14px;
+  font-weight: bold;
+}
+
 input[type="checkbox"] {
   -khtml-appearance: none;
   background: url(../images/check-box-bezel.png) no-repeat;
@@ -21,9 +27,6 @@ button {
   line-height: 12px;
   -webkit-border-image: url(../images/button-bezel.png) 0 0 0 0 stretch stretch;
   padding: 4px 6px;
-  font-family: 'Arial';
-  font-size: 12px;
-  font-weight: bold;
   color: #4F4F4F;
 }
 
@@ -36,4 +39,15 @@ button:active {
 
 button:disabled {
   
+}
+
+header {
+  display: block;
+  height: 30px;
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  border-bottom: 2px solid #979797;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EAEAEA), to(#C2C2C2));
+  color: #2C2C2C;
 }
