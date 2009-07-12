@@ -56,7 +56,7 @@ button.hud {
   text-shadow: none;
 }
 
-button:hover {
+button:hover:not(:disabled) {
   -webkit-box-shadow: 0 0 4px #D4D4D4;
 }
 
@@ -68,7 +68,7 @@ button.hud:hover {
   -webkit-box-shadow: none;
 }
 
-button:active {
+button:active:not(:disabled) {
   -webkit-border-image: url(../images/button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
 }
 
@@ -81,7 +81,7 @@ button.hud:active {
 }
 
 button:disabled {
-  -webkit-border-image: url(../images/button-bezel-disabled.png) 2 2 2 2 stretch stretch;
+  opacity: 0.5;
 }
 
 ::-webkit-scrollbar {
