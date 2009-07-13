@@ -57,11 +57,11 @@ button.hud {
 }
 
 button:hover:not(:disabled) {
-  -webkit-box-shadow: 0 0 4px #D4D4D4;
+  -webkit-box-shadow: 0 0 15px #D4D4D4;
 }
 
 button.default:hover {
-  -webkit-box-shadow: 0 0 4px #A1CAE2;
+  -webkit-box-shadow: 0 0 15px #A1CAE2;
 }
 
 button.hud:hover {
