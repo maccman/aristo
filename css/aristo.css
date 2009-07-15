@@ -48,7 +48,7 @@ button.default {
   -webkit-border-image: url(../images/default-button-bezel.png) 2 2 2 2 stretch stretch;
 }
 
-button.hud {
+.hud button, button.hud {
   font-size: 11px;
   color: #fff;
   padding: 0;
@@ -64,7 +64,7 @@ button.default:hover {
   -webkit-box-shadow: 0 0 15px #A1CAE2;
 }
 
-button.hud:hover {
+.hud button:hover, button.hud:hover {
   -webkit-box-shadow: none;
 }
 
@@ -76,7 +76,7 @@ button.default:active {
   -webkit-border-image: url(../images/default-button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
 }
 
-button.hud:active {
+.hud button:active, button.hud:active {
   -webkit-border-image: url(../images/hud/button-bezel-highlighted.png) 9 13 10 13 / 8px 13px 9px 13px repeat repeat;
 }
 
@@ -203,4 +203,12 @@ header {
   background: -webkit-gradient(linear, left top, left bottom, from(#EAEAEA), to(#C2C2C2));
   text-shadow: 0px 1px 1px #fff;
   color: #2C2C2C;
+}
+
+.hud {
+  -webkit-border-radius: 3px;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#525252), color-stop(0.3, #212121), color-stop(0.33, #1D1D1D), to(#1D1D1D));
+  height: 100px;
+  width: 200px;
 }
