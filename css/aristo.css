@@ -29,14 +29,17 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
+  border: none;
   background: url(../images/radio-bezel-selected.png) no-repeat;
 }
 
 button {
   margin: 5px;
   -khtml-appearance: none;
+  -moz-appearance: none;
   background: none;
   -webkit-border-image: url(../images/button-bezel.png) 2 2 2 2 stretch stretch;
+  -moz-border-image: url(../images/button-bezel.png) 2 2 2 2 stretch stretch;
   padding: 3px 8px;
   color: #4F4F4F;
   -webkit-transition: -webkit-box-shadow 0.2s linear;
@@ -46,6 +49,7 @@ button {
 button.default {
   color: #1C4257;
   -webkit-border-image: url(../images/default-button-bezel.png) 2 2 2 2 stretch stretch;
+  -moz-border-image: url(../images/default-button-bezel.png) 2 2 2 2 stretch stretch;
 }
 
 button.hud {
@@ -53,31 +57,38 @@ button.hud {
   color: #fff;
   padding: 0;
   -webkit-border-image: url(../images/hud/button-bezel.png) 9 13 10 13 / 8px 13px 9px 13px repeat repeat;
+  -moz-border-image: url(../images/hud/button-bezel.png) 9 13 10 13 / 8px 13px 9px 13px repeat repeat;
   text-shadow: none;
 }
 
 button:hover:not(:disabled) {
   -webkit-box-shadow: 0 0 15px #D4D4D4;
+  -moz-box-shadow: 0 0 15px #D4D4D4;
 }
 
 button.default:hover {
   -webkit-box-shadow: 0 0 15px #A1CAE2;
+  -moz-box-shadow: 0 0 15px #A1CAE2;
 }
 
 button.hud:hover {
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
 }
 
 button:active:not(:disabled) {
   -webkit-border-image: url(../images/button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
+  -moz-border-image: url(../images/button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
 }
 
 button.default:active {
   -webkit-border-image: url(../images/default-button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
+  -moz-border-image: url(../images/default-button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
 }
 
 button.hud:active {
   -webkit-border-image: url(../images/hud/button-bezel-highlighted.png) 9 13 10 13 / 8px 13px 9px 13px repeat repeat;
+  -moz-border-image: url(../images/hud/button-bezel-highlighted.png) 9 13 10 13 / 8px 13px 9px 13px repeat repeat;
 }
 
 button:disabled {
@@ -176,9 +187,10 @@ input[type="range"] {
 
 input, textarea {
   font-size: 12px;
-  color: #000;
+  color: #000 !important;
   font-weight: normal;
-  padding: 4px;
+  padding: 4px !important;
+  border: none;
 }
 
 ::-webkit-input-placeholder {
