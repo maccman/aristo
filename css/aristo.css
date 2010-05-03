@@ -4,10 +4,27 @@ http://qooxdoo.org/documentation/general/webkit_css_styles
 http://trac.webkit.org/browser/trunk/LayoutTests//fast/css
 */
 
-* {
-  font-family: 'Arial';
+html, body {
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+}
+
+body {
+  font-family: Apex,"Helvetica Neue","HelveticaNeue",helvetica,sans-serif;
   font-size: 14px;
   font-weight: bold;
+}
+
+a {
+  color: #71829E;
+  cursor: pointer;
+}
+
+label {
+  font-size: 13px;
 }
 
 input[type="checkbox"] {
@@ -33,6 +50,52 @@ input[type="radio"]:checked {
   background: url(../images/radio-bezel-selected.png) no-repeat;
 }
 
+input[type="range"] {
+  -khtml-appearance: none; 
+  -webkit-border-image: url(../images/slider-horizontal-track.png) 2 4 2 4 / 2px 4px 2px 4px repeat repeat;
+  height: 5px;
+  padding: 0;
+}
+
+input, textarea {
+  font-size: 12px;
+  color: #000;
+  font-weight: normal;
+  padding: 4px;
+}
+
+textarea {
+  /* To give the same inset shadows as input[type='text'] */
+  -webkit-appearance: textfield;
+  resize: none;
+  padding: 4px;
+  /* 
+    Hack to make the same size as text inputs,
+    since their native border isn't taken into
+    account when calculating width.
+  */
+  padding-right: 6px;
+}
+
+select {
+  -khtml-appearance: none;
+  background: url(../images/select-updown.png) center right no-repeat, 
+              -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#CCCCCC));
+  min-height: 24px;
+  border: 1px solid #BDBDBD;
+  border-bottom-color: #949494;
+  padding: 0 35px 0 5px;
+  outline: none;
+}
+
+select:active {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #8F8F8F;
+}
+
 button {
   margin: 5px;
   -khtml-appearance: none;
@@ -41,15 +104,23 @@ button {
   -webkit-border-image: url(../images/button-bezel.png) 2 2 2 2 stretch stretch;
   -moz-border-image: url(../images/button-bezel.png) 2 2 2 2 stretch stretch;
   padding: 3px 8px;
+  font-weight: bold;
+  font-size: 12px;
   color: #4F4F4F;
   -webkit-transition: -webkit-box-shadow 0.2s linear;
   text-shadow: 0px 1px 1px #fff;
 }
 
-button.default {
+button.default, button.blue {
   color: #1C4257;
   -webkit-border-image: url(../images/default-button-bezel.png) 2 2 2 2 stretch stretch;
   -moz-border-image: url(../images/default-button-bezel.png) 2 2 2 2 stretch stretch;
+}
+
+button.green {
+  color: #374C29;
+  -webkit-border-image: url(../images/button-green.png) 2 2 2 2 stretch stretch;
+  -moz-border-image: url(../images/button-green.png) 2 2 2 2 stretch stretch;
 }
 
 .hud button, button.hud {
@@ -62,13 +133,13 @@ button.default {
 }
 
 button:hover:not(:disabled) {
-  -webkit-box-shadow: 0 0 15px #D4D4D4;
-  -moz-box-shadow: 0 0 15px #D4D4D4;
+  -webkit-box-shadow: 0 0 5px #D4D4D4;
+  -moz-box-shadow: 0 0 5px #D4D4D4;
 }
 
-button.default:hover {
-  -webkit-box-shadow: 0 0 15px #A1CAE2;
-  -moz-box-shadow: 0 0 15px #A1CAE2;
+button.default:hover, button.blue:hover {
+  -webkit-box-shadow: 0 0 5px #A1CAE2;
+  -moz-box-shadow: 0 0 5px #A1CAE2;
 }
 
 .hud button:hover, button.hud:hover {
@@ -81,7 +152,7 @@ button:active:not(:disabled) {
   -moz-border-image: url(../images/button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
 }
 
-button.default:active {
+button.default:active, button.blue:active {
   -webkit-border-image: url(../images/default-button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
   -moz-border-image: url(../images/default-button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
 }
@@ -154,6 +225,7 @@ button:disabled {
   background-repeat: no-repeat, repeat-x;
 }
 
+
 /* Turn on single button up on top, and down on bottom */
 ::-webkit-scrollbar-button:start:decrement,
 ::-webkit-scrollbar-button:end:increment {
@@ -164,13 +236,6 @@ button:disabled {
 ::-webkit-scrollbar-button:start:increment,
 ::-webkit-scrollbar-button:end:decrement {
     display: none;
-}
-
-input[type="range"] {
-  -khtml-appearance: none; 
-  -webkit-border-image: url(../images/slider-horizontal-track.png) 2 4 2 4 / 2px 4px 2px 4px repeat repeat;
-  height: 5px;
-  padding: 0;
 }
 
 ::-webkit-slider-thumb { 
@@ -185,18 +250,6 @@ input[type="range"] {
   background: url(../images/slider-knob-highlighted.png) no-repeat;
 }
 
-input, textarea {
-  font-size: 12px;
-  color: #000 !important;
-  font-weight: normal;
-  padding: 4px !important;
-  border: none;
-}
-
-::-webkit-input-placeholder {
-  color: #BDC7D3;
-}
-
 .copy {
   cursor: copy;
 }
@@ -205,7 +258,7 @@ input, textarea {
   cursor: progress;
 }
 
-header, .header {
+header.aristo {
   display: block;
   height: 30px;
   width: 300px;
@@ -228,7 +281,7 @@ header, .header {
   width: 200px;
 }
 
-nav {
+nav.aristo {
   display: block;
   width: 100%;
   height: 33px;
@@ -236,7 +289,7 @@ nav {
   background: -moz-linear-gradient(left top, left bottom, from(#030303), to(#44474b));
   clear: both;
 }
-nav a {
+nav.aristo a {
   display: block;
   float: left;
   padding: 10px;
@@ -246,7 +299,7 @@ nav a {
   text-shadow: 0px 1px 1px #000; 
   text-decoration: none;
 }
-nav a:hover, nav a.active {
+nav.aristo a:hover, nav a.active {
   background: -webkit-gradient(linear, left top, left bottom, from(#81AFC8), to(#BBE1F7));
   background: -moz-linear-gradient(left top, left bottom, from(#81AFC8), to(#BBE1F7));
   color: #1C4257;
