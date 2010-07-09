@@ -16,6 +16,7 @@ body {
   font-family: Apex,"Helvetica Neue","HelveticaNeue",helvetica,sans-serif;
   font-size: 14px;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -101,65 +102,81 @@ button {
   -khtml-appearance: none;
   -moz-appearance: none;
   background: none;
-  -webkit-border-image: url(../images/button-bezel.png) 2 2 2 2 stretch stretch;
-  -moz-border-image: url(../images/button-bezel.png) 2 2 2 2 stretch stretch;
-  padding: 3px 8px;
+  padding: 4px 9px;
   font-weight: bold;
   font-size: 12px;
   color: #4F4F4F;
-  -webkit-transition: -webkit-box-shadow 0.2s linear;
   text-shadow: 0px 1px 1px #fff;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: #AFAFAF #9A9A9A #828282 #9A9A9A;
+  
+  background: #E9E9E9;
+  background: -webkit-gradient(linear, left top, left bottom, from(#E9E9E9), to(#B8B8B7));
+  background: -moz-linear-gradient(top, #E9E9E9, #B8B8B7);
+  -webkit-box-shadow: inset 0 1px 1px #F5F5F5;
+  -moz-box-shadow: inset 0 1px 1px #F5F5F5;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
 }
 
 button.default, button.blue {
+  border-color: #7EA1B7 #5D7C8F #4C6B7E #5D7C8F;
   color: #1C4257;
-  -webkit-border-image: url(../images/default-button-bezel.png) 2 2 2 2 stretch stretch;
-  -moz-border-image: url(../images/default-button-bezel.png) 2 2 2 2 stretch stretch;
+  background: #B2D9F0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#B2D9F0), to(#78A1BC));
+  background: -moz-linear-gradient(top, #B2D9F0, #78A1BC);
+  -webkit-box-shadow: inset 0 1px 1px #D9EDF9;
+  -moz-box-shadow: inset 0 1px 1px #D9EDF9;
 }
 
 button.green {
   color: #374C29;
-  -webkit-border-image: url(../images/button-green.png) 2 2 2 2 stretch stretch;
-  -moz-border-image: url(../images/button-green.png) 2 2 2 2 stretch stretch;
+  -webkit-box-shadow: inset 1px 1px #CDE2B2;
+  -moz-box-shadow: inset 1px 1px #CDE2B2;
+  background: #A9CD7E;
+  background: -webkit-gradient(linear, left top, left bottom, from(#A9CD7E), to(#81A558));
+  background: -moz-linear-gradient(top, #A9CD7E, #81A558);
+  border-color: #92BA63 #8AB05E #81A558 #8AB05E;
 }
 
-.hud button, button.hud {
-  font-size: 11px;
-  color: #fff;
-  padding: 0;
-  -webkit-border-image: url(../images/hud/button-bezel.png) 9 13 10 13 / 8px 13px 9px 13px repeat repeat;
-  -moz-border-image: url(../images/hud/button-bezel.png) 9 13 10 13 / 8px 13px 9px 13px repeat repeat;
-  text-shadow: none;
-}
-
-button:hover:not(:disabled) {
-  -webkit-box-shadow: 0 0 5px #D4D4D4;
-  -moz-box-shadow: 0 0 5px #D4D4D4;
-}
-
-button.default:hover, button.blue:hover {
-  -webkit-box-shadow: 0 0 5px #A1CAE2;
-  -moz-box-shadow: 0 0 5px #A1CAE2;
-}
-
-.hud button:hover, button.hud:hover {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
+button.red {
+  color: #4F0F0E;
+  background: #E56856;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EE8679), to(#B94543));
+  background: -moz-linear-gradient(top, #EE8679, #B94543);
+  -webkit-box-shadow: inset 0 1px 1px #E9978D;
+  -moz-box-shadow: inset 0 1px 1px #E9978D;
+  text-shadow: 0 1px 1px #FA9287;
+  border-color: #A2403E;
 }
 
 button:active:not(:disabled) {
-  -webkit-border-image: url(../images/button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
-  -moz-border-image: url(../images/button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
+  border-color: #B6B6B6 #989898 #AEAEAE #989898;
+  background: #B6B6B6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#B6B6B6), to(#E6E6E6));
+  background: -moz-linear-gradient(top, #B6B6B6, #E6E6E6);
+  -webkit-box-shadow: inset 0 -1px 1px #F4F4F4;
+  -moz-box-shadow: inset 0 -1px 1px #F4F4F4;
 }
 
 button.default:active, button.blue:active {
-  -webkit-border-image: url(../images/default-button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
-  -moz-border-image: url(../images/default-button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
+  border-color: #4A697C #618296 #7B9FB5 #618296;
+  background: #76A0B9;
+  background: -webkit-gradient(linear, left top, left bottom, from(#76A0B9), to(#B0D7EF));
+  background: -moz-linear-gradient(top, #76A0B9, #B0D7EF);
+  -webkit-box-shadow: inset 0 -1px 1px #D8EDF8;
+  -moz-box-shadow: inset 0 -1px 1px #D8EDF8;
 }
 
-.hud button:active, button.hud:active {
-  -webkit-border-image: url(../images/hud/button-bezel-highlighted.png) 9 13 10 13 / 8px 13px 9px 13px repeat repeat;
-  -moz-border-image: url(../images/hud/button-bezel-highlighted.png) 9 13 10 13 / 8px 13px 9px 13px repeat repeat;
+button.red:active {
+  border-color: #A2403E;
+  background: #B94543;
+  background: -webkit-gradient(linear, left top, left bottom, from(#B94543), to(#EE8679));
+  background: -moz-linear-gradient(top, #B94543, #EE8679);
+  -webkit-box-shadow: inset 0 -1px 1px #E9978D;
+  -moz-box-shadow: inset 0 -1px 1px #E9978D;
 }
 
 button:disabled {
@@ -256,52 +273,4 @@ button:disabled {
 
 .progress {
   cursor: progress;
-}
-
-header.aristo {
-  display: block;
-  height: 30px;
-  width: 300px;
-  padding: 10px;
-  text-align: center;
-  border-bottom: 2px solid #979797;
-  background: #C2C2C2;
-  background: -webkit-gradient(linear, left top, left bottom, from(#EAEAEA), to(#C2C2C2));
-  background: -moz-linear-gradient(left top, left bottom, from(#EAEAEA), to(#C2C2C2));
-  text-shadow: 0px 1px 1px #fff;
-  color: #2C2C2C;
-}
-
-.hud {
-  -webkit-border-radius: 3px;
-  color: #fff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#525252), color-stop(0.3, #212121), color-stop(0.33, #1D1D1D), to(#1D1D1D));
-  background: -moz-linear-gradient(left top, left bottom, from(#525252), color-stop(0.3, #212121), color-stop(0.33, #1D1D1D), to(#1D1D1D));
-  height: 100px;
-  width: 200px;
-}
-
-nav.aristo {
-  display: block;
-  width: 100%;
-  height: 33px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#030303), to(#44474b));
-  background: -moz-linear-gradient(left top, left bottom, from(#030303), to(#44474b));
-  clear: both;
-}
-nav.aristo a {
-  display: block;
-  float: left;
-  padding: 10px;
-  color: #A5A5A5;
-  font-size: 11px;
-  font-weight: normal;
-  text-shadow: 0px 1px 1px #000; 
-  text-decoration: none;
-}
-nav.aristo a:hover, nav a.active {
-  background: -webkit-gradient(linear, left top, left bottom, from(#81AFC8), to(#BBE1F7));
-  background: -moz-linear-gradient(left top, left bottom, from(#81AFC8), to(#BBE1F7));
-  color: #1C4257;
-  text-shadow: 0px 1px 1px #FFF; 
 }
