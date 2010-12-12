@@ -1,9 +1,12 @@
 
-Welcome to Aristo!
-======================
+h1. Welcome to "CSS3 Aristo":http://github.com/dtrejo/aristo/!
 
-Introduction
-------------
+h2. CSS3 Aristo Demo
+
+See the "demo":http://dtrejo.github.com/aristo/!
+
+h2. Introduction
+
 Aristo is an open source UI distributed as part of the Cappuccino Open Source Framework (http://cappuccino.org)
 and specifically designed for the cross platform challenges applications face today. It is a collaborative 
 effort by 280 North, Inc. and Sofa and released under the Creative Commons Attribution Share-Alike License.
