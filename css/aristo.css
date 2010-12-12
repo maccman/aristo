@@ -161,7 +161,7 @@ button:active:not(:disabled) {
   -moz-box-shadow: inset 0 -1px 1px #F4F4F4;
 }
 
-button.default:active, button.blue:active {
+button.default:active:not(:disabled), button.blue:active:not(:disabled) {
   border-color: #4A697C #618296 #7B9FB5 #618296;
   background: #76A0B9;
   background: -webkit-gradient(linear, left top, left bottom, from(#76A0B9), to(#B0D7EF));
@@ -170,7 +170,7 @@ button.default:active, button.blue:active {
   -moz-box-shadow: inset 0 -1px 1px #D8EDF8;
 }
 
-button.red:active {
+button.red:active:not(:disabled) {
   border-color: #A2403E;
   background: #B94543;
   background: -webkit-gradient(linear, left top, left bottom, from(#B94543), to(#EE8679));
