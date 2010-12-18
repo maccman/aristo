@@ -5,18 +5,7 @@ http://trac.webkit.org/browser/trunk/LayoutTests//fast/css
 */
 
 html, body {
-  height: 100%;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
   -webkit-user-select: none;
-}
-
-body {
-  font-family: Apex,"Helvetica Neue","HelveticaNeue","Lucida Grande", Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -59,7 +48,7 @@ input[type="range"] {
 }
 
 input, textarea {
-  font-size: 12px;
+  font-size: 1em;
   color: #000;
   font-weight: normal;
   padding: 4px;
