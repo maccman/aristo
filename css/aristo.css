@@ -4,10 +4,6 @@ http://qooxdoo.org/documentation/general/webkit_css_styles
 http://trac.webkit.org/browser/trunk/LayoutTests//fast/css
 */
 
-html, body {
-  -webkit-user-select: none;
-}
-
 a {
   color: #71829E;
   cursor: pointer;
@@ -69,6 +65,7 @@ textarea {
 
 select {
   -khtml-appearance: none;
+  -webkit-user-select: none;
   background: url(../images/select-updown.png) center right no-repeat, 
               -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#CCCCCC));
   min-height: 24px;
@@ -115,6 +112,7 @@ button {
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   cursor: pointer;
+  -webkit-user-select: none;
 }
 button:hover,
 button:focus {
