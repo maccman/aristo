@@ -79,7 +79,8 @@ select:active {
   outline: none;
 }
 
-::-webkit-input-placeholder {
+/* FIXME: this grey is not showing in FF. */
+::-webkit-input-placeholder, :-moz-placeholder {
   color: #8F8F8F;
 }
 
@@ -300,6 +301,23 @@ button:disabled, button:hover:disabled {
 /*This doesn't seem to be implemented yet*/
 ::-webkit-slider-thumb:active { 
   background: url(../images/slider-knob-highlighted.png) no-repeat;
+}
+
+.search {
+  margin: 6px 0;
+  height: 19px;
+  width: 180px;
+  padding: 0 10px;
+  background: white;
+  border: 1px solid #e1e1e1;
+  border-top: none;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: inset 0 1px 1px #5F5F5F;
+  -moz-box-shadow: inset 0 1px 1px #5F5F5F;
+  -webkit-box-shadow: inset 0 1px 1px #5F5F5F;
+  -moz-user-select: text;
 }
 
 .copy {
