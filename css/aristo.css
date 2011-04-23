@@ -96,6 +96,10 @@ select:active {
 ::-webkit-input-placeholder {
   color: #8F8F8F;
 }
+:-moz-placeholder {
+  color: #8F8F8F;
+}
+
 
 button {
   margin: 5px;
